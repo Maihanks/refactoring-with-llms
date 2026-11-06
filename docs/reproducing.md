@@ -1,6 +1,6 @@
 # Reproducing the experiments
 
-This document describes how to rerun the pi harness experiments: four smell
+This document describes how to rerun the pi harness experiments: five smell
 order planners on six Sousa composite-refactoring cases, with ORGANIC
 detection, Gradle tests, and CK metrics after each case.
 
@@ -20,7 +20,8 @@ For each dataset case the harness:
 5. Advances only when tests pass and the current smell is gone.
 6. On case finish, records CK metrics (CBO, LCOM, WMC, LOC).
 
-Four planners on six cases = 24 runs:
+Five planners on six cases = 30 runs. The comparison set is DAPS, TopS, BeFS,
+and SEQ-Refactor; `none` is retained as an unsorted control:
 
 | CLI `--planner` | Name |
 |-----------------|------|
@@ -28,6 +29,19 @@ Four planners on six cases = 24 runs:
 | `greedy` | DAPS |
 | `topo` | TopS |
 | `bfs` | BeFS |
+| `seqrefactor` | SEQ-Refactor |
+
+For a no-LLM, fixed-baseline ordering comparison on the Tap4j case, run:
+
+```bash
+uv run python -m experiments.compare_ordering \
+  --manifest dataset/manifest_eval6.jsonl \
+  --case-id "Tap4j:462ab4c8c308"
+```
+
+Its interpretation and current result are in
+[`seqrefactor-tap4j-ordering.md`](seqrefactor-tap4j-ordering.md). This comparison
+does not apply Java edits; the Pi batch command below is the full agent experiment.
 
 ## Prerequisites
 
@@ -89,14 +103,26 @@ see `dataset/generation/generate_manifest.py` and `dataset/datasets.config.toml`
 That path needs a running Neo4j instance and is not required to rerun the
 eval set.
 
-## Run all 24 experiments
+## Run all 30 experiments
 
 ```bash
-for planner in none greedy topo bfs; do
+for planner in none greedy topo bfs seqrefactor; do
   node --experimental-strip-types experiments/pi_batch.ts \
     dataset/manifest_eval6.jsonl \
     --planner "$planner" \
     --concurrency 2
+done
+```
+
+For the focused four-planner Tap4j comparison (without the unsorted control):
+
+```bash
+for planner in greedy topo bfs seqrefactor; do
+  node --experimental-strip-types experiments/pi_batch.ts \
+    dataset/manifest_eval6.jsonl \
+    --case-id "Tap4j:462ab4c8c308" \
+    --planner "$planner" \
+    --concurrency 1
 done
 ```
 

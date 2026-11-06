@@ -46,7 +46,7 @@ const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(SCRIPT_DIR, "..");
 const DEFAULT_PROFILE = "without-planning";
 const DEFAULT_CONCURRENCY = 2;
-const PLANNER_CHOICES = ["none", "bfs", "greedy", "topo"] as const;
+const PLANNER_CHOICES = ["none", "bfs", "greedy", "topo", "seqrefactor"] as const;
 type PlannerChoice = (typeof PLANNER_CHOICES)[number];
 const THINKING_LEVEL = "high";
 /** Hard wall clock per case (includes agent thrashing). */

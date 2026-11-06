@@ -172,10 +172,14 @@ def planner_from_config() -> PlannerProtocol:
             from planning.topo import TopoPlanner
 
             return TopoPlanner()
+        case "seqrefactor":
+            from planning.seqrefactor import SeqRefactorPlanner
+
+            return SeqRefactorPlanner()
         case _:
             raise ValueError(
                 f"Unsupported planning.planner={name!r}; "
-                "expected 'none', 'bfs', 'greedy', or 'topo'"
+                "expected 'none', 'bfs', 'greedy', 'topo', or 'seqrefactor'"
             )
 
 

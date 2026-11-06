@@ -206,6 +206,22 @@ def test_planner_from_config_topo_env(monkeypatch) -> None:
     assert isinstance(planner, TopoPlanner)
 
 
+def test_planner_from_config_seqrefactor_env(monkeypatch) -> None:
+    from planning.seqrefactor import SeqRefactorPlanner
+
+    monkeypatch.setenv("PLANNING_PLANNER", "seqrefactor")
+    planner = planner_from_config()
+    assert isinstance(planner, SeqRefactorPlanner)
+
+
+def test_planner_from_config_seqrefactor_env(monkeypatch) -> None:
+    from planning.seqrefactor import SeqRefactorPlanner
+
+    monkeypatch.setenv("PLANNING_PLANNER", "seqrefactor")
+    planner = planner_from_config()
+    assert isinstance(planner, SeqRefactorPlanner)
+
+
 def test_transitions_keep_distinct_actions_with_same_successor() -> None:
     first = Smell.at(
         LAZY_CLASS,

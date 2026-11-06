@@ -11,6 +11,7 @@ default_transition_cost = 1.0
 # greedy = max positive side-effects (NZ ignored)
 # topo = scored topo sorts over pos/neg/unspecified AST-local preference edges
 # bfs = best-first search over full dependency rules (incl. NZ)
+# seqrefactor = prerequisite-safe Kahn order, impact-forward among ready smells
 planner = "greedy"
 locality = "none"
 token_budget = 200000
