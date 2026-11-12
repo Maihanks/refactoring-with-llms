@@ -1,0 +1,1633 @@
+{
+ "runs": {
+  "greedy": {
+   "planner": "greedy",
+   "stop_reason": "smells_cleared",
+   "original": 17,
+   "fixed_original": 17,
+   "total_introduced": 18,
+   "fixed_introduced": 18,
+   "remaining_end": 0,
+   "net_resolved": 17,
+   "wall_min": 26.878635120391845,
+   "cost_usd": 0.075046,
+   "tokens_total": 410620,
+   "tokens_in": 322537,
+   "tokens_out": 88083,
+   "cache_read": 844544,
+   "turns": 149,
+   "models": {
+    "deepseek/deepseek-v4-flash-0731": 149
+   },
+   "cost_by_model": {
+    "deepseek/deepseek-v4-flash-0731": 0.07503800000000004
+   },
+   "refactor_completions": 25,
+   "max_attempt": 2,
+   "verifications": 32,
+   "verify_passed": 27,
+   "verify_test_fail": 5,
+   "verify_smell_still": 2,
+   "planner_invocations": 23,
+   "ast_elements": 726,
+   "ast_edges": 1891,
+   "pick_sequence": [
+    "Long Method",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Message Chains",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    null
+   ],
+   "introduced_types": {
+    "Feature Envy": 5,
+    "Message Chains": 3
+   },
+   "timeline": [
+    {
+     "t_min": 1.5031099677085877,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 0,
+     "total_introduced": 0
+    },
+    {
+     "t_min": 2.2010957837104796,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 3.3941043694814046,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 13
+    },
+    {
+     "t_min": 4.327523533503214,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 13
+    },
+    {
+     "t_min": 5.967585817972819,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 13
+    },
+    {
+     "t_min": 6.342421519756317,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 13
+    },
+    {
+     "t_min": 7.686166103680929,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 9.250012485186259,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 10.355566302935282,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 10.787088902791341,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 11.53675743341446,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 12.956001667181651,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 13.976324236392974,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 14.270642002423605,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 15.464261317253113,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 15.749957283337912,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 17.205621333916984,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 18.614482820034027,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 19.3935665845871,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 19.893660084406534,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 21.12930105129878,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 22.002479553222656,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 22.48135806719462,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 22.79393901824951,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 23.04910128513972,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 23.65970843633016,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 17
+    },
+    {
+     "t_min": 24.402811018625894,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 17
+    },
+    {
+     "t_min": 24.779768653710683,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 17
+    },
+    {
+     "t_min": 25.037089518706004,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 17
+    },
+    {
+     "t_min": 25.59539495309194,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 18
+    },
+    {
+     "t_min": 26.05490473508835,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 18
+    },
+    {
+     "t_min": 26.5817959189415,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 18
+    }
+   ],
+   "ck_final_logged": {
+    "success": true,
+    "exit_code": 0,
+    "classes": 131,
+    "methods": 715,
+    "mean_cbo": 4.687022900763359,
+    "mean_lcom": 29.12213740458015,
+    "mean_wmc": 8.679389312977099,
+    "total_loc": 5156.0
+   }
+  },
+  "topo": {
+   "planner": "topo",
+   "stop_reason": "smells_cleared",
+   "original": 17,
+   "fixed_original": 17,
+   "total_introduced": 18,
+   "fixed_introduced": 18,
+   "remaining_end": 0,
+   "net_resolved": 17,
+   "wall_min": 28.223806150754292,
+   "cost_usd": 0.116463,
+   "tokens_total": 455874,
+   "tokens_in": 317801,
+   "tokens_out": 138073,
+   "cache_read": 1438208,
+   "turns": 166,
+   "models": {
+    "deepseek/deepseek-v4-flash-0731": 166
+   },
+   "cost_by_model": {
+    "deepseek/deepseek-v4-flash-0731": 0.11645999999999994
+   },
+   "refactor_completions": 33,
+   "max_attempt": 2,
+   "verifications": 37,
+   "verify_passed": 36,
+   "verify_test_fail": 1,
+   "verify_smell_still": 3,
+   "planner_invocations": 25,
+   "ast_elements": 726,
+   "ast_edges": 1890,
+   "pick_sequence": [
+    "Long Method",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Message Chains",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    null
+   ],
+   "introduced_types": {
+    "Feature Envy": 7,
+    "Message Chains": 1
+   },
+   "timeline": [
+    {
+     "t_min": 0.9253901521364848,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 0,
+     "total_introduced": 0
+    },
+    {
+     "t_min": 1.4595800161361694,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 2.111358102162679,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 2.683420467376709,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 3.2435160676638284,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 4.116360100110372,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 4.597596800327301,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 4.933198233445485,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 5.551673785845439,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 5.859358835220337,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 6.351932819684347,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 6.813643232981364,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 7.2959115664164225,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 9.463612000147501,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 10.819650399684907,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 11.52191454966863,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 12
+    },
+    {
+     "t_min": 12.622778983910878,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 12
+    },
+    {
+     "t_min": 14.083931783835093,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 12
+    },
+    {
+     "t_min": 15.241310850779216,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 12
+    },
+    {
+     "t_min": 15.707569968700408,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 12
+    },
+    {
+     "t_min": 16.459959352016448,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 17.27542134920756,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 18.421878119309742,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 19.665248966217042,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 20.17295483350754,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 20.6655833363533,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 21.23738193511963,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 21.789281833171845,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 22.242035619417827,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 22.859270334243774,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 23.342212585608163,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 23.893147202332816,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 24.741287418206532,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 18
+    },
+    {
+     "t_min": 25.30211326678594,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 18
+    },
+    {
+     "t_min": 26.668513719240824,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 18
+    },
+    {
+     "t_min": 27.723398117224374,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 18
+    },
+    {
+     "t_min": 27.93211628595988,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 18
+    }
+   ],
+   "ck_final_logged": {
+    "success": true,
+    "exit_code": 0,
+    "classes": 131,
+    "methods": 707,
+    "mean_cbo": 4.687022900763359,
+    "mean_lcom": 27.541984732824428,
+    "mean_wmc": 8.625954198473282,
+    "total_loc": 5116.0
+   }
+  },
+  "bfs": {
+   "planner": "bfs",
+   "stop_reason": "smells_exhausted",
+   "original": 17,
+   "fixed_original": 17,
+   "total_introduced": 16,
+   "fixed_introduced": 15,
+   "remaining_end": 1,
+   "net_resolved": 16,
+   "wall_min": 23.725445115566252,
+   "cost_usd": 0.113925,
+   "tokens_total": 589767,
+   "tokens_in": 450169,
+   "tokens_out": 139598,
+   "cache_read": 1086208,
+   "turns": 186,
+   "models": {
+    "deepseek/deepseek-v4-flash-0731": 186
+   },
+   "cost_by_model": {
+    "deepseek/deepseek-v4-flash-0731": 0.11391999999999998
+   },
+   "refactor_completions": 33,
+   "max_attempt": 2,
+   "verifications": 39,
+   "verify_passed": 35,
+   "verify_test_fail": 4,
+   "verify_smell_still": 2,
+   "planner_invocations": 30,
+   "ast_elements": 727,
+   "ast_edges": 1893,
+   "pick_sequence": [
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Message Chains",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    null
+   ],
+   "introduced_types": {
+    "Feature Envy": 11,
+    "Message Chains": 5
+   },
+   "timeline": [
+    {
+     "t_min": 0.7992131829261779,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 2
+    },
+    {
+     "t_min": 1.634183649222056,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 2
+    },
+    {
+     "t_min": 2.326247533162435,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 0,
+     "total_introduced": 2
+    },
+    {
+     "t_min": 2.8588677008946735,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 3.180378266175588,
+     "passed": true,
+     "remaining_original": 17,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 4.175038548310598,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 5.030335601170858,
+     "passed": false,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 5.168803068002065,
+     "passed": false,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 5.350382665793101,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 6.326003468036651,
+     "passed": false,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 6.524263334274292,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 7.0693564176559445,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 7.529437065124512,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 8.035506415367127,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 8.635277899106343,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 7
+    },
+    {
+     "t_min": 9.55139729976654,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 7
+    },
+    {
+     "t_min": 10.100037801265717,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 7
+    },
+    {
+     "t_min": 11.530751915772756,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 7
+    },
+    {
+     "t_min": 12.016919982433318,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 8
+    },
+    {
+     "t_min": 13.092978032430013,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 8
+    },
+    {
+     "t_min": 13.730568218231202,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 1,
+     "total_introduced": 8
+    },
+    {
+     "t_min": 14.184285068511963,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 3,
+     "total_introduced": 10
+    },
+    {
+     "t_min": 14.764681100845337,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 11
+    },
+    {
+     "t_min": 15.18747248252233,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 12
+    },
+    {
+     "t_min": 15.67167851527532,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 12
+    },
+    {
+     "t_min": 16.347916134198506,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 13
+    },
+    {
+     "t_min": 17.43806023200353,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 13
+    },
+    {
+     "t_min": 18.006174218654632,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 18.4208522995313,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 14
+    },
+    {
+     "t_min": 19.017656981945038,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 19.903962834676108,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 15
+    },
+    {
+     "t_min": 20.34482153256734,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 21.023362731933595,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 21.27032525142034,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 3,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 21.494893848896027,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 21.911810115973154,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 22.3536457657814,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 22.85846399863561,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 16
+    },
+    {
+     "t_min": 23.436091999212902,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 16
+    }
+   ],
+   "ck_final_logged": {
+    "success": true,
+    "exit_code": 0,
+    "classes": 131,
+    "methods": 717,
+    "mean_cbo": 4.687022900763359,
+    "mean_lcom": 28.19083969465649,
+    "mean_wmc": 8.725190839694656,
+    "total_loc": 5153.0
+   }
+  },
+  "seqrefactor": {
+   "planner": "seqrefactor",
+   "stop_reason": "smells_cleared",
+   "original": 17,
+   "fixed_original": 17,
+   "total_introduced": 9,
+   "fixed_introduced": 9,
+   "remaining_end": 0,
+   "net_resolved": 17,
+   "wall_min": 25.77548464934031,
+   "cost_usd": 0.076945,
+   "tokens_total": 430524,
+   "tokens_in": 337513,
+   "tokens_out": 93011,
+   "cache_read": 751104,
+   "turns": 133,
+   "models": {
+    "deepseek/deepseek-v4-flash-0731": 133
+   },
+   "cost_by_model": {
+    "deepseek/deepseek-v4-flash-0731": 0.07694599999999999
+   },
+   "refactor_completions": 31,
+   "max_attempt": 2,
+   "verifications": 36,
+   "verify_passed": 32,
+   "verify_test_fail": 4,
+   "verify_smell_still": 1,
+   "planner_invocations": 23,
+   "ast_elements": 727,
+   "ast_edges": 1889,
+   "pick_sequence": [
+    "Long Method",
+    "Long Method",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Long Method",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Message Chains",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    "Feature Envy",
+    null
+   ],
+   "introduced_types": {
+    "Feature Envy": 7,
+    "Message Chains": 2
+   },
+   "timeline": [
+    {
+     "t_min": 0.7656941175460815,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 2,
+     "total_introduced": 2
+    },
+    {
+     "t_min": 1.2074592192967732,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 2
+    },
+    {
+     "t_min": 1.6148650328318277,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 2
+    },
+    {
+     "t_min": 2.1054581999778748,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 3
+    },
+    {
+     "t_min": 2.421310718854268,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 3
+    },
+    {
+     "t_min": 2.8790138165156045,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 3.515927282969157,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 4.006786032517751,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 4.57961653470993,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 5.012139451503754,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 5.4486302177111305,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 6.098202534516653,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 6.52004425128301,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 6.682667569319407,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 4
+    },
+    {
+     "t_min": 6.926965550581614,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 7.2596428990364075,
+     "passed": true,
+     "remaining_original": 7,
+     "active_introduced": 0,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 7.717206199963887,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 8.191440816720327,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 16.44590226809184,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 16.60772361755371,
+     "passed": false,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 16.896241799990335,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 17.327342466513315,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 17.66247538328171,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 18.203460868199667,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 2,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 19.26244378487269,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 20.31556038459142,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 20.77643228371938,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 5
+    },
+    {
+     "t_min": 21.339432100454967,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 22.074269449710847,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 6
+    },
+    {
+     "t_min": 22.558808883031208,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 7
+    },
+    {
+     "t_min": 22.833573098977407,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 7
+    },
+    {
+     "t_min": 23.32908591826757,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 7
+    },
+    {
+     "t_min": 24.04792593320211,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 8
+    },
+    {
+     "t_min": 24.418284952640533,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 8
+    },
+    {
+     "t_min": 24.823448685805,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 1,
+     "total_introduced": 9
+    },
+    {
+     "t_min": 25.443067800998687,
+     "passed": true,
+     "remaining_original": 0,
+     "active_introduced": 0,
+     "total_introduced": 9
+    }
+   ],
+   "ck_final_logged": {
+    "success": true,
+    "exit_code": 0,
+    "classes": 131,
+    "methods": 713,
+    "mean_cbo": 4.687022900763359,
+    "mean_lcom": 28.87786259541985,
+    "mean_wmc": 8.687022900763358,
+    "total_loc": 5143.0
+   }
+  }
+ },
+ "ck": {
+  "baseline": {
+   "targets": {
+    "org.tap4j.consumer.TestTap13Consumer": {
+     "cbo": 14.0,
+     "fanin": 0.0,
+     "fanout": 14.0,
+     "wmc": 34.0,
+     "rfc": 32.0,
+     "lcom": 190.0,
+     "loc": 134.0,
+     "totalMethodsQty": 20.0,
+     "maxNestedBlocksQty": 1.0
+    },
+    "org.tap4j.model.BailOut": {
+     "cbo": 2.0,
+     "fanin": 10.0,
+     "fanout": 2.0,
+     "wmc": 4.0,
+     "rfc": 0.0,
+     "lcom": 2.0,
+     "loc": 18.0,
+     "totalMethodsQty": 4.0,
+     "maxNestedBlocksQty": 0.0
+    },
+    "org.tap4j.producer.TestTap13YamlProducer": {
+     "cbo": 16.0,
+     "fanin": 0.0,
+     "fanout": 16.0,
+     "wmc": 20.0,
+     "rfc": 30.0,
+     "lcom": 0.0,
+     "loc": 151.0,
+     "totalMethodsQty": 7.0,
+     "maxNestedBlocksQty": 3.0
+    }
+   },
+   "target_sum": {
+    "cbo": 32.0,
+    "fanin": 10.0,
+    "fanout": 32.0,
+    "wmc": 58.0,
+    "rfc": 62.0,
+    "lcom": 192.0,
+    "loc": 303.0,
+    "totalMethodsQty": 31.0,
+    "maxNestedBlocksQty": 4.0
+   },
+   "target_methods": {
+    "count": 31,
+    "mean_method_wmc": 1.8709677419354838,
+    "max_method_wmc": 7.0,
+    "mean_method_loc": 9.32258064516129,
+    "max_method_loc": 40.0
+   },
+   "whole_project": {
+    "cbo": 4.588709677419355,
+    "wmc": 8.298387096774194,
+    "lcom": 21.282258064516128,
+    "rfc": 9.701612903225806,
+    "loc_total": 4769.0,
+    "classes": 124
+   }
+  },
+  "greedy": {
+   "targets": {
+    "org.tap4j.consumer.TestTap13Consumer": {
+     "cbo": 15.0,
+     "fanin": 1.0,
+     "fanout": 15.0,
+     "wmc": 42.0,
+     "rfc": 45.0,
+     "lcom": 528.0,
+     "loc": 180.0,
+     "totalMethodsQty": 33.0,
+     "maxNestedBlocksQty": 1.0
+    },
+    "org.tap4j.model.BailOut": {
+     "cbo": 2.0,
+     "fanin": 10.0,
+     "fanout": 2.0,
+     "wmc": 4.0,
+     "rfc": 0.0,
+     "lcom": 2.0,
+     "loc": 18.0,
+     "totalMethodsQty": 4.0,
+     "maxNestedBlocksQty": 0.0
+    },
+    "org.tap4j.producer.TestTap13YamlProducer": {
+     "cbo": 17.0,
+     "fanin": 1.0,
+     "fanout": 17.0,
+     "wmc": 27.0,
+     "rfc": 34.0,
+     "lcom": 0.0,
+     "loc": 157.0,
+     "totalMethodsQty": 15.0,
+     "maxNestedBlocksQty": 3.0
+    }
+   },
+   "target_sum": {
+    "cbo": 34.0,
+    "fanin": 12.0,
+    "fanout": 34.0,
+    "wmc": 73.0,
+    "rfc": 79.0,
+    "lcom": 530.0,
+    "loc": 355.0,
+    "totalMethodsQty": 52.0,
+    "maxNestedBlocksQty": 4.0
+   },
+   "target_methods": {
+    "count": 52,
+    "mean_method_wmc": 1.4038461538461537,
+    "max_method_wmc": 7.0,
+    "mean_method_loc": 6.5576923076923075,
+    "max_method_loc": 34.0
+   },
+   "whole_project": {
+    "cbo": 4.604838709677419,
+    "wmc": 8.419354838709678,
+    "lcom": 24.008064516129032,
+    "rfc": 9.838709677419354,
+    "loc_total": 4821.0,
+    "classes": 124
+   }
+  },
+  "topo": {
+   "targets": {
+    "org.tap4j.consumer.TestTap13Consumer": {
+     "cbo": 15.0,
+     "fanin": 1.0,
+     "fanout": 15.0,
+     "wmc": 34.0,
+     "rfc": 38.0,
+     "lcom": 300.0,
+     "loc": 157.0,
+     "totalMethodsQty": 25.0,
+     "maxNestedBlocksQty": 1.0
+    },
+    "org.tap4j.model.BailOut": {
+     "cbo": 2.0,
+     "fanin": 10.0,
+     "fanout": 2.0,
+     "wmc": 4.0,
+     "rfc": 0.0,
+     "lcom": 2.0,
+     "loc": 18.0,
+     "totalMethodsQty": 4.0,
+     "maxNestedBlocksQty": 0.0
+    },
+    "org.tap4j.producer.TestTap13YamlProducer": {
+     "cbo": 17.0,
+     "fanin": 1.0,
+     "fanout": 17.0,
+     "wmc": 27.0,
+     "rfc": 32.0,
+     "lcom": 0.0,
+     "loc": 135.0,
+     "totalMethodsQty": 14.0,
+     "maxNestedBlocksQty": 3.0
+    }
+   },
+   "target_sum": {
+    "cbo": 34.0,
+    "fanin": 12.0,
+    "fanout": 34.0,
+    "wmc": 65.0,
+    "rfc": 70.0,
+    "lcom": 302.0,
+    "loc": 310.0,
+    "totalMethodsQty": 43.0,
+    "maxNestedBlocksQty": 4.0
+   },
+   "target_methods": {
+    "count": 43,
+    "mean_method_wmc": 1.5116279069767442,
+    "max_method_wmc": 7.0,
+    "mean_method_loc": 6.883720930232558,
+    "max_method_loc": 32.0
+   },
+   "whole_project": {
+    "cbo": 4.604838709677419,
+    "wmc": 8.362903225806452,
+    "lcom": 22.338709677419356,
+    "rfc": 9.766129032258064,
+    "loc_total": 4781.0,
+    "classes": 124
+   }
+  },
+  "bfs": {
+   "targets": {
+    "org.tap4j.consumer.TestTap13Consumer": {
+     "cbo": 15.0,
+     "fanin": 1.0,
+     "fanout": 15.0,
+     "wmc": 41.0,
+     "rfc": 41.0,
+     "lcom": 406.0,
+     "loc": 163.0,
+     "totalMethodsQty": 29.0,
+     "maxNestedBlocksQty": 1.0
+    },
+    "org.tap4j.model.BailOut": {
+     "cbo": 2.0,
+     "fanin": 10.0,
+     "fanout": 2.0,
+     "wmc": 4.0,
+     "rfc": 0.0,
+     "lcom": 2.0,
+     "loc": 18.0,
+     "totalMethodsQty": 4.0,
+     "maxNestedBlocksQty": 0.0
+    },
+    "org.tap4j.producer.TestTap13YamlProducer": {
+     "cbo": 17.0,
+     "fanin": 1.0,
+     "fanout": 17.0,
+     "wmc": 34.0,
+     "rfc": 44.0,
+     "lcom": 0.0,
+     "loc": 171.0,
+     "totalMethodsQty": 21.0,
+     "maxNestedBlocksQty": 3.0
+    }
+   },
+   "target_sum": {
+    "cbo": 34.0,
+    "fanin": 12.0,
+    "fanout": 34.0,
+    "wmc": 79.0,
+    "rfc": 85.0,
+    "lcom": 408.0,
+    "loc": 352.0,
+    "totalMethodsQty": 54.0,
+    "maxNestedBlocksQty": 4.0
+   },
+   "target_methods": {
+    "count": 54,
+    "mean_method_wmc": 1.462962962962963,
+    "max_method_wmc": 7.0,
+    "mean_method_loc": 6.2592592592592595,
+    "max_method_loc": 34.0
+   },
+   "whole_project": {
+    "cbo": 4.604838709677419,
+    "wmc": 8.46774193548387,
+    "lcom": 23.024193548387096,
+    "rfc": 9.887096774193548,
+    "loc_total": 4818.0,
+    "classes": 124
+   }
+  },
+  "seqrefactor": {
+   "targets": {
+    "org.tap4j.consumer.TestTap13Consumer": {
+     "cbo": 15.0,
+     "fanin": 1.0,
+     "fanout": 15.0,
+     "wmc": 44.0,
+     "rfc": 44.0,
+     "lcom": 496.0,
+     "loc": 172.0,
+     "totalMethodsQty": 32.0,
+     "maxNestedBlocksQty": 1.0
+    },
+    "org.tap4j.model.BailOut": {
+     "cbo": 2.0,
+     "fanin": 10.0,
+     "fanout": 2.0,
+     "wmc": 4.0,
+     "rfc": 0.0,
+     "lcom": 2.0,
+     "loc": 18.0,
+     "totalMethodsQty": 4.0,
+     "maxNestedBlocksQty": 0.0
+    },
+    "org.tap4j.producer.TestTap13YamlProducer": {
+     "cbo": 17.0,
+     "fanin": 1.0,
+     "fanout": 17.0,
+     "wmc": 26.0,
+     "rfc": 33.0,
+     "lcom": 0.0,
+     "loc": 152.0,
+     "totalMethodsQty": 14.0,
+     "maxNestedBlocksQty": 3.0
+    }
+   },
+   "target_sum": {
+    "cbo": 34.0,
+    "fanin": 12.0,
+    "fanout": 34.0,
+    "wmc": 74.0,
+    "rfc": 77.0,
+    "lcom": 498.0,
+    "loc": 342.0,
+    "totalMethodsQty": 50.0,
+    "maxNestedBlocksQty": 4.0
+   },
+   "target_methods": {
+    "count": 50,
+    "mean_method_wmc": 1.48,
+    "max_method_wmc": 7.0,
+    "mean_method_loc": 6.56,
+    "max_method_loc": 34.0
+   },
+   "whole_project": {
+    "cbo": 4.604838709677419,
+    "wmc": 8.42741935483871,
+    "lcom": 23.75,
+    "rfc": 9.82258064516129,
+    "loc_total": 4808.0,
+    "classes": 124
+   }
+  }
+ }
+}
