@@ -255,10 +255,25 @@ def _prepare(
         start_commit=case.start_commit,
         feedback=feedback,
     )
-    tasks = build_pi_smell_tasks(repo, feedback) if feedback else []
+    # The first smell goes through the configured planner, exactly like every
+    # later pick in ``_next_smell``; detection order is not a planner choice.
+    first_feedback: OrganicFeedback | None = None
+    if feedback:
+        first_feedback, _sync = next_queue_smell(
+            smell_state,
+            repo_path=repo.path,
+            skip_identity_keys=set(),
+        )
+    tasks = (
+        [build_pi_smell_task(repo, first_feedback, index=1, total=len(feedback))]
+        if first_feedback is not None
+        else []
+    )
     task = tasks[0] if tasks else ""
     current_smell_key = (
-        smell_identity_key(feedback[0], case.start_commit) if feedback else ""
+        smell_identity_key(first_feedback, case.start_commit)
+        if first_feedback is not None
+        else ""
     )
     system_prompt = build_pi_system_prompt(
         profile.system_instructions,

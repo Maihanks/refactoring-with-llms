@@ -124,6 +124,75 @@ def test_prepare_accepts_case_id_with_spaces(
     assert eliot_events[0]["harness"] == "pi"
 
 
+def test_prepare_first_task_is_chosen_by_planner_not_detection_order(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    """The first smell must come from the planner, like every later pick."""
+    from agents.pi import smell_run
+
+    detected_first = OrganicFeedback(
+        smell=Smell.at("Feature Envy", "/tmp/repo/src/A.java", 4, severity="MEDIUM", detected_by="ORGANIC"),
+        owner="example.A.copy",
+        scope=OrganicScope.METHOD,
+        reason="CALLS_TO_example.B > 4",
+        relevant_metrics=(),
+    )
+    planner_choice = OrganicFeedback(
+        smell=Smell.at("Long Method", "/tmp/repo/src/A.java", 20, severity="HIGH", detected_by="ORGANIC"),
+        owner="example.A.run",
+        scope=OrganicScope.METHOD,
+        reason="MLOC > 6.0",
+        relevant_metrics=(),
+    )
+
+    class FakeCase:
+        case_id = "Example:abc"
+        project = "Example"
+        repo_url = "https://example.com/a.git"
+        start_commit = "abc"
+        elements = ("example.A",)
+
+    run_dir = tmp_path / "run"
+    run_log = run_dir / "all.log"
+    seen: list[list[str]] = []
+
+    def fake_pick(smells, repo_path, *, planner=None):  # type: ignore[no-untyped-def]
+        seen.append([s.type for s in smells])
+        return next(s for s in smells if s.type == "Long Method")
+
+    monkeypatch.setattr(smell_run, "pick_next_smell", fake_pick)
+    monkeypatch.setattr(hooks, "Dataset", lambda: SimpleNamespace(load_cases=lambda: [FakeCase()]))
+    monkeypatch.setattr(
+        hooks, "load_deep_agent_profile", lambda name: SimpleNamespace(name=name, system_instructions="x")
+    )
+    monkeypatch.setattr(hooks, "langgraph_config", lambda: {"timeout_seconds": 30})
+    monkeypatch.setattr(
+        hooks,
+        "Repo",
+        SimpleNamespace(for_experiment=lambda url, commit, *, checkout_path=None: SimpleNamespace(path=Path("/tmp/repo"))),
+    )
+    monkeypatch.setattr(
+        hooks, "remaining_target_feedback", lambda repo, elements: (detected_first, planner_choice)
+    )
+    monkeypatch.setattr(hooks, "build_pi_system_prompt", lambda instructions, *, repo_path: "prompt")
+    monkeypatch.setattr(hooks, "pi_worktree_path", lambda url: tmp_path / "wt")
+    monkeypatch.setattr(hooks, "pi_output_dir", lambda: tmp_path / "out")
+    monkeypatch.setattr(hooks, "append_pi_event", lambda *args, **kwargs: tmp_path / "runs.jsonl")
+    monkeypatch.setattr(hooks, "project_relative", lambda path: str(path))
+    monkeypatch.setattr(hooks, "create_pi_run_paths", lambda repo_url: (run_dir, run_log))
+    monkeypatch.setattr(hooks, "configure_pi_logging", lambda run_log_arg: run_log)
+    monkeypatch.setattr(hooks, "log_message", lambda **kwargs: None)
+
+    payload = hooks._prepare("Example:abc", "without-planning")
+
+    assert seen == [["Feature Envy", "Long Method"]]
+    assert payload["current_smell_key"] == smell_identity_key(planner_choice, "abc")
+    assert "Long Method" in str(payload["task"])
+    assert payload["tasks"] == [payload["task"]]
+    assert "Smell 1 of 2:" in str(payload["task"])
+
+
 def test_build_pi_system_prompt_mentions_automatic_checks_not_builtin_tools() -> None:
     prompt = hooks.build_pi_system_prompt(
         "Create todos.",
