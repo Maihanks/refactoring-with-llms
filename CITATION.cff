@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it as below. This repository is an
+  extended fork of hpietukhin/refactoring-with-llms; please also credit the
+  original work (see references).
+title: "refactoring-with-llms (SEQ-Refactor extended fork)"
+type: software
+authors:
+  - family-names: Maihankali
+    given-names: Munura
+repository-code: "https://github.com/Maihanks/refactoring-with-llms"
+abstract: >-
+  An extended fork of refactoring-with-llms that integrates the SEQ-Refactor
+  smell-ordering planner alongside the existing DAPS, TopS and BeFS planners,
+  together with single-run and repeated planner comparison experiments on tap4j.
+keywords:
+  - refactoring
+  - code smells
+  - large language models
+  - refactoring planning
+date-released: "2026-11-16"
+references:
+  - type: software
+    title: refactoring-with-llms
+    authors:
+      - family-names: Pietukhin
+        given-names: Havriil
+    repository-code: "https://github.com/hpietukhin/refactoring-with-llms"
+    notes: "Original repository this fork is derived from."
+  - type: software
+    title: SEQ-Refactor
+    authors:
+      - family-names: Maihankali
+        given-names: Munura
+    repository-code: "https://github.com/Maihanks/SEQ-Refactor"
+    notes: "Planner integrated into this fork."
