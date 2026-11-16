@@ -1,5 +1,5 @@
 # refactoring with llms
-
+## This is an extended fork of hpietukhin/refactoring-with-llms. It adds the SEQ-Refactor (https://github.com/Maihanks/SEQ-Refactor/) as a fourth planner to the existing planners. The planner comparison experiments in docs/ and experiments/."
 
 
 Run an experiment case:
